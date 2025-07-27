@@ -19,7 +19,8 @@
     "gen:version": "node scripts/generate-version.js",
     "postbuild": "echo 'Build completed - sitemap generation disabled'",
     "prepare": "husky install",
-    "pages:build": "pnpm gen:runtime && pnpm gen:manifest && next build && npx @cloudflare/next-on-pages --experimental-minify"
+    "pages:build": "pnpm gen:runtime && pnpm gen:manifest && next build && npx @cloudflare/next-on-pages --experimental-minify",
+    "deploy": "wrangler deploy --config wrangler.toml"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.12",
